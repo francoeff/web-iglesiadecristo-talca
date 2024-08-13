@@ -1,0 +1,162 @@
+.hero {
+  .logo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 2.5rem;
+    margin: 2rem 0 0 2rem;
+  }
+  .btn-contacto {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 2rem 2rem 0 0;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+
+    padding: 0.5rem 1rem;
+    color: rgba(255, 255, 255, 0.9);
+    border: solid 1px rgba(255, 255, 255, 0.5);
+    border-radius: 0.5rem;
+
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.2);
+    }
+  }
+
+  h1,
+  h3,
+  p {
+    z-index: 1;
+    color: white;
+    strong {
+      font-weight: 900;
+      font-size: 1.5rem;
+      color: #ffd2e2;
+    }
+  }
+  h1 {
+    margin-bottom: 3rem;
+    font-family: 'Rubik', sans-serif;
+    font-size: 5rem;
+    font-weight: 600;
+  }
+  h3 {
+    font-family: 'Rubik', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+  p {
+    text-align: center;
+    line-height: 1.5rem;
+    font-size: 1.2rem;
+    max-width: 600px;
+  }
+  .content {
+    z-index: 1;
+    text-align: center;
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  @media screen and (max-width: 768px) {
+    h1 {
+      font-size: 3rem;
+    }
+    h3 {
+      font-size: 1.2rem;
+    }
+    p {
+      font-size: 1rem;
+    }
+  }
+}
+
+.menu {
+  position: absolute;
+  bottom: 0;
+  margin-bottom: 2.5rem;
+  z-index: 1;
+}
+
+@-webkit-keyframes AnimationName {
+  0% {
+    background-position: 65% 0%;
+  }
+  50% {
+    background-position: 36% 100%;
+  }
+  100% {
+    background-position: 65% 0%;
+  }
+}
+@-moz-keyframes AnimationName {
+  0% {
+    background-position: 65% 0%;
+  }
+  50% {
+    background-position: 36% 100%;
+  }
+  100% {
+    background-position: 65% 0%;
+  }
+}
+@keyframes AnimationName {
+  0% {
+    background-position: 65% 0%;
+  }
+  50% {
+    background-position: 36% 100%;
+  }
+  100% {
+    background-position: 65% 0%;
+  }
+}
+
+[class^='section-'] {
+  padding: 3rem 8rem;
+  h3 {
+    font-size: 2.5rem;
+    font-weight: 400;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 3rem;
+    font-family: 'Rubik', sans-serif;
+  }
+  @media screen and (max-width: 768px) {
+    padding: 1rem;
+    h3 {
+      font-size: 1.8rem;
+    }
+  }
+}
+
+.footer {
+  background-color: #322f3c;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+  text-align: center;
+  gap: 2rem;
+
+  @media screen and (max-width: 768px) {
+    padding-bottom: 6rem;
+  }
+
+  .logo {
+    height: 2.5rem;
+    width: fit-content;
+  }
+  q {
+    color: #d8bfd8;
+    max-width: 700px;
+  }
+}

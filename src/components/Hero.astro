@@ -1,0 +1,28 @@
+---
+const { backgroundImage } = Astro.props;
+---
+
+<style define:vars={{ backgroundImage: `url(${backgroundImage})` }}>
+  .hero {
+    position: relative;
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 1rem;
+
+    background-image: linear-gradient(
+        180deg,
+        rgb(36 22 52 / 80%),
+        rgb(76 36 128 / 40%),
+        rgba(194, 87, 160, 0.6)
+      ),
+      var(--backgroundImage);
+    background-size: cover;
+  }
+</style>
+<div class='hero'>
+  <slot />
+</div>

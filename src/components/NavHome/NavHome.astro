@@ -1,0 +1,86 @@
+---
+import { Icon } from 'astro-icon/components';
+import { menus } from './menus.ts';
+---
+
+<nav class='menu'>
+  {
+    menus.map((menu) => (
+      <div class='menuItem'>
+        <Icon name={menu.icon} />
+        {menu.text}
+      </div>
+    ))
+  }
+</nav>
+
+<style>
+  .menu {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(110px, 150px));
+    justify-content: center;
+    gap: 1rem;
+    width: 100%;
+
+    .menuItem {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 1rem;
+      gap: 0.5rem;
+      border-radius: 0.2rem;
+      background-color: #ffffff;
+      box-shadow: -1px 2px 3px 0px #bababa4d;
+      color: var(--primary) !important;
+      cursor: pointer;
+      transition: background-color 0.5s;
+      &:hover {
+        background-color: var(--primary-hover);
+        color: white !important;
+      }
+      svg {
+        width: 2rem;
+        height: 2rem;
+      }
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    .menu {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background-color: var(--tertiary);
+      z-index: 1;
+      grid-template-columns: repeat(auto-fit, minmax(60px, 70px));
+      gap: 0;
+      margin-bottom: 0;
+      justify-content: space-between;
+      .menuItem {
+        background-color: var(--tertiary);
+        padding: 0.5rem;
+        font-size: 0.7rem;
+        text-align: center;
+        color: #fff;
+        box-shadow: none;
+        svg {
+          width: 1.5rem;
+          height: 1.5rem;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 350px) {
+    .menu {
+      grid-template-columns: repeat(auto-fit, minmax(40px, 50px));
+      .menuItem {
+        font-size: 0.7rem;
+        svg {
+          width: 1rem;
+        }
+      }
+    }
+  }
+</style>

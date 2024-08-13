@@ -1,16 +1,51 @@
 ---
-
+import '../styles/global.css';
+import '../styles/home.css';
+import NavHome from '@components/NavHome/NavHome.astro';
+import { Icon } from 'astro-icon/components';
+import Hero from '@components/Hero.astro';
+import OurCompromise from '@components/home/sections/OurCompromise.astro';
+import OurWish from '@components/home/sections/OurWish.astro';
+import AmISave from '@components/home/sections/AmISave.astro';
+import ContactUs from '@components/home/sections/ContactUs.astro';
+import Footer from '@components/Footer.astro';
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
+<html lang='en'>
+  <head>
+    <meta charset='utf-8' />
+    <link rel='icon' type='image/svg+xml' href='/favicon.svg' />
+    <meta name='viewport' content='width=device-width' />
+    <meta name='generator' content={Astro.generator} />
+    <title>Astro</title>
+  </head>
+  <body>
+    <Hero backgroundImage="/assets/img/bg-hero1.jpg">
+      <div class='content'>
+        <img class='logo' src='/assets/img/logo_iglesia.png' alt='' />
+        <a class='btn-contacto' href='#'><Icon name='call' /> Contáctanos</a>
+        <h3>UNA IGLESIA BÍBLICA</h3>
+        <h1>PARA LA GLORIA DE DIOS</h1>
+        <p>
+          <strong
+            >A Dios sea gloria en la iglesia en Cristo Jesús por todas las
+            edades</strong
+          >, por los siglos de los siglos. Amén. <br />
+          Efesios 3:20-21
+        </p>
+      </div>
+    </Hero>
+
+    <NavHome />
+
+    <OurWish />
+
+    <OurCompromise classes='divider-top' />
+
+    <AmISave classes='divider-top' />
+
+    <ContactUs />
+
+    <Footer />
+  </body>
 </html>

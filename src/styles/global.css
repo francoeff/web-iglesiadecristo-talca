@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+/* variables */
+:root {
+  --primary: #c7589d;
+  --secondary: #d8bfd8;
+  --tertiary: #322f3c;
+  --primary-hover: #c178ab;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: "Nunito Sans", sans-serif;
+    font-weight: 200;
+    font-optical-sizing: auto;
+    font-size: 16px;
+    box-sizing: border-box;
+    text-decoration: none;
+  }
+
+h1,h2,h3,h4,h5,h6, p, li, label {
+  color: var(--tertiary);
+}
+
+.form-group {
+  input,
+  textarea {
+    width: 100%;
+    padding: 0.5rem 1rem;
+    margin: 1rem 0;
+    border: solid 1px #c257a0;
+    border-radius: 0.3rem;
+  }
+}
+
+.btn {
+  display: inline-block;
+  padding: 1rem 2rem;
+  color: white;
+  background-color: var(--primary);
+  border: none;
+  border-radius: 0.2rem;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.3s;
+  &:hover {
+    background-color: var(--primary-hover);
+  }
+}
+
+.divider-bottom {
+  clip-path: polygon(
+    0 0,
+    100% 0,
+    100% calc(100% - 50px),
+    50% 100%,
+    0 calc(100% - 50px)
+  );
+}
+.divider-top {
+  clip-path: polygon(0 0, 50% 50px, 100% 0, 100% 100%, 0 100%);
+  margin-top: -50px;
+}
+
+.divider-rev-bottom {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 50% calc(100% - 50px), 0 100%);
+}
+.divider-rev-top {
+  clip-path: polygon(0 50px, 50% 0, 100% 50px, 100% 100%, 0 100%);
+  margin-top: -40px;
+}

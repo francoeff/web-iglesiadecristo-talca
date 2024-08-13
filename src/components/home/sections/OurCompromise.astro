@@ -1,0 +1,50 @@
+---
+import CardWithIcon from '@components/CardWithIcon.astro';
+import { compromises } from './compromises';
+import { Icon } from 'astro-icon/components';
+
+const { classes } = Astro.props;
+---
+
+<section class=`section-our-compromise ${classes}`>
+  <h3>Nuestro compromiso</h3>
+  <div class='items'>
+    {
+      compromises.map((compromise) => {
+        const icon = <Icon name={compromise.icon} />;
+        return <CardWithIcon {...compromise} icon={icon} />;
+      })
+    }
+  </div>
+</section>
+
+<style>
+  .section-our-compromise {
+    background-color: var(--tertiary);
+    padding-top: 5rem;
+    padding-bottom: 7rem;
+    h3 {
+      margin: 5rem 0;
+      color: #d8bfd8;
+    }
+
+    .items {
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: space-around;
+      align-items: flex-start;
+      row-gap: 3rem;
+
+      & > * {
+        flex: 0 1 250px;
+      }
+
+      h4 {
+        color: var(--primary);
+      }
+      p {
+        color: var(--secondary);
+      }
+    }
+  }
+</style>

@@ -1,0 +1,6 @@
+{
+    "singleQuote": true,
+    "maxWidth": 120,
+    "jsxSingleQuote": true,
+    "tabWidth": 2
+}
