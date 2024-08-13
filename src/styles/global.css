@@ -71,3 +71,7 @@ h1,h2,h3,h4,h5,h6, p, li, label {
   clip-path: polygon(0 50px, 50% 0, 100% 50px, 100% 100%, 0 100%);
   margin-top: -40px;
 }
+
+.hidden {
+  display: none !important;
+}

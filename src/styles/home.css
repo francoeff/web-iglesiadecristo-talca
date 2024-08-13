@@ -76,13 +76,17 @@
       font-size: 1rem;
     }
   }
-}
-
-.menu {
-  position: absolute;
-  bottom: 0;
-  margin-bottom: 2.5rem;
-  z-index: 1;
+  .navHome {
+    position: absolute;
+    bottom: 0;
+    margin-bottom: -1rem;
+    z-index: 1; 
+  }
+  @media screen and (max-width: 1024px) {
+    .navHome {
+      display: none !important;
+    }
+  }
 }
 
 @-webkit-keyframes AnimationName {

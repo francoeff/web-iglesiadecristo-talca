@@ -1,7 +1,8 @@
 ---
 import '../styles/global.css';
 import '../styles/home.css';
-import NavHome from '@components/Nav/Nav.astro';
+import Nav from '@components/Nav/Nav.astro';
+import NavHome from '@components/home/NavHome.astro';
 import { Icon } from 'astro-icon/components';
 import Hero from '@components/Hero.astro';
 import OurCompromise from '@components/home/sections/OurCompromise.astro';
@@ -20,6 +21,7 @@ import Footer from '@components/Footer.astro';
     <title>Astro</title>
   </head>
   <body>
+    <Nav fixed classList={['hidden']} currentMenu="Inicio" />
     <Hero backgroundImage='/assets/img/bg-hero1.jpg'>
       <div class='content'>
         <img class='logo' src='/assets/img/logo_iglesia.png' alt='' />
@@ -34,9 +36,8 @@ import Footer from '@components/Footer.astro';
           Efesios 3:20-21
         </p>
       </div>
+      <NavHome />
     </Hero>
-
-    <NavHome />
 
     <OurWish />
 
@@ -49,16 +50,32 @@ import Footer from '@components/Footer.astro';
     <Footer />
 
     <script>
-      const menu = document.querySelector('.menu');
-      const menuPosition = menu && menu.getBoundingClientRect().top + window.scrollY;
-      window.addEventListener('scroll', () => {
-        if (!menu || !menuPosition) return;
+      const nav = document.querySelector('.menu');
+      const navHome = document.querySelector('.navHome');
+      const navHomePosition =
+        navHome && navHome.getBoundingClientRect().top + window.scrollY;
+      let showMobileMenu = window.innerWidth < 1024;
 
-        if (window.scrollY > menuPosition) {
-          menu.classList.add('fixed');
-        } else {
-          menu.classList.remove('fixed');
+      const processMobileMenu = () => {
+        if (showMobileMenu) {
+          nav?.classList.remove('hidden');
         }
+      };
+
+      processMobileMenu();
+
+      window.addEventListener('scroll', () => {
+        if (!nav || !navHome || !navHomePosition || showMobileMenu) return;
+
+        if (window.scrollY > navHomePosition) {
+          nav.classList.remove('hidden');
+        } else {
+          nav.classList.add('hidden');
+        }
+      });
+      window.addEventListener('resize', () => {
+        showMobileMenu = window.innerWidth < 768;
+        processMobileMenu();
       });
     </script>
   </body>
