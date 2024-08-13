@@ -1,7 +1,7 @@
 ---
 import '../styles/global.css';
 import '../styles/home.css';
-import NavHome from '@components/NavHome/NavHome.astro';
+import NavHome from '@components/Nav/Nav.astro';
 import { Icon } from 'astro-icon/components';
 import Hero from '@components/Hero.astro';
 import OurCompromise from '@components/home/sections/OurCompromise.astro';
@@ -20,7 +20,7 @@ import Footer from '@components/Footer.astro';
     <title>Astro</title>
   </head>
   <body>
-    <Hero backgroundImage="/assets/img/bg-hero1.jpg">
+    <Hero backgroundImage='/assets/img/bg-hero1.jpg'>
       <div class='content'>
         <img class='logo' src='/assets/img/logo_iglesia.png' alt='' />
         <a class='btn-contacto' href='#'><Icon name='call' /> Contáctanos</a>
@@ -47,5 +47,19 @@ import Footer from '@components/Footer.astro';
     <ContactUs />
 
     <Footer />
+
+    <script>
+      const menu = document.querySelector('.menu');
+      const menuPosition = menu && menu.getBoundingClientRect().top + window.scrollY;
+      window.addEventListener('scroll', () => {
+        if (!menu || !menuPosition) return;
+
+        if (window.scrollY > menuPosition) {
+          menu.classList.add('fixed');
+        } else {
+          menu.classList.remove('fixed');
+        }
+      });
+    </script>
   </body>
 </html>

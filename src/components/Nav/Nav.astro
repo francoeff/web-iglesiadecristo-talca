@@ -1,15 +1,21 @@
 ---
 import { Icon } from 'astro-icon/components';
 import { menus } from './menus.ts';
+const { fixed } = Astro.props;
 ---
 
-<nav class='menu'>
+<nav class={`menu ${fixed && 'fixed'}`}>
+  <div class='menuItem logo'>
+    <img src='/assets/img/logo_iglesia.png' />
+  </div>
   {
     menus.map((menu) => (
-      <div class='menuItem'>
-        <Icon name={menu.icon} />
-        {menu.text}
-      </div>
+      <a href={menu.url}>
+        <div class='menuItem'>
+          <Icon name={menu.icon} />
+          {menu.text}
+        </div>
+      </a>
     ))
   }
 </nav>
@@ -41,6 +47,38 @@ import { menus } from './menus.ts';
       svg {
         width: 2rem;
         height: 2rem;
+      }
+
+      &.logo {
+        display: none;
+      }
+    }
+  }
+
+  .fixed {
+    position: fixed;
+    top: 0;
+    bottom: auto;
+    background-color: #8a8393;
+    box-shadow: 0px 2px 3px 0px #bababa4d;
+    align-items: center;
+    gap: 0;
+
+    .menuItem {
+      background-color: transparent;
+      box-shadow: none;
+      color: #fff !important;
+      padding: 1rem;
+      flex-direction: row;
+
+      &.logo {
+        display: flex;
+        position: absolute;
+        left: 0;
+        margin-left: 1rem;
+        &:hover {
+          background-color: transparent;
+        }
       }
     }
   }
