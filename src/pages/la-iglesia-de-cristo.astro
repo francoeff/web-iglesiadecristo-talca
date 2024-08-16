@@ -1,7 +1,23 @@
 ---
-import Nav from "@components/Nav/Nav.astro";
-
-
+import PageLayout from "src/layouts/PageLayout.astro";
 ---
 
-<Nav fixed />
+<PageLayout title="La Iglesia" currentMenu="La iglesia">
+    <div class="page">
+        <h1>La Iglesia de Cristo</h1>
+        <p>
+            La iglesia de Cristo es una comunidad de creyentes que se reúnen para adorar a Dios, estudiar la Biblia y
+            compartir el evangelio de Jesucristo. La iglesia es el cuerpo de Cristo en la tierra y está compuesta por
+            personas de todas las edades, razas y trasfondos. La iglesia es un lugar donde los creyentes pueden crecer en
+            su fe, servir a los demás y glorificar a Dios en todo lo que hacen.
+        </p>
+    </div>
+</PageLayout>
+
+<style>
+    .page {
+        max-width: 800px;
+        margin: 2rem auto;
+        padding: 2rem;
+    }
+</style>

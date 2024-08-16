@@ -1,0 +1,36 @@
+---
+import '../styles/global.css';
+import Nav from '@components/Nav/Nav.astro';
+import Footer from '@components/Footer.astro';
+const { title, currentMenu } = Astro.props;
+---
+
+<html lang='es'>
+  <head>
+    <meta charset='utf-8' />
+    <link rel='icon' type='image/svg+xml' href='/favicon.svg' />
+    <meta name='viewport' content='width=device-width' />
+    <meta name='generator' content={Astro.generator} />
+    <title>{title} - Iglesia de Cristo en Talca</title>
+  </head>
+  <body>
+    <Nav
+      fixed
+      classList={currentMenu === 'Inicio' ? ['hidden'] : []}
+      currentMenu={currentMenu}
+    />
+    <div class:list={['contentPage', currentMenu !== 'Inicio' && 'space-navbar']}>
+      <slot />
+    </div>
+      <Footer />
+  </body>
+</html>
+
+<style>
+  .contentPage {
+    min-height: 75vh;
+  }
+  .space-navbar {
+    margin-top: 65px;
+  }
+</style>

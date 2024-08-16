@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+@import url('./reset.css');
 
 /* variables */
 :root {
@@ -10,14 +11,12 @@
 }
 
 * {
-    padding: 0;
-    margin: 0;
     font-family: "Nunito Sans", sans-serif;
     font-weight: 200;
     font-optical-sizing: auto;
-    font-size: 16px;
     box-sizing: border-box;
     text-decoration: none;
+    font-size: 16px;
   }
 
 h1,h2,h3,h4,h5,h6, p, li, label {

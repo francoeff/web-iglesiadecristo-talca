@@ -140,27 +140,3 @@
     }
   }
 }
-
-.footer {
-  background-color: #322f3c;
-  padding: 2rem;
-  display: flex;
-  flex-direction: column;
-  justify-items: center;
-  align-items: center;
-  text-align: center;
-  gap: 2rem;
-
-  @media screen and (max-width: 768px) {
-    padding-bottom: 6rem;
-  }
-
-  .logo {
-    height: 2.5rem;
-    width: fit-content;
-  }
-  q {
-    color: #d8bfd8;
-    max-width: 700px;
-  }
-}

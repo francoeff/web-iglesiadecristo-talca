@@ -1,7 +1,6 @@
 ---
-import '../styles/global.css';
 import '../styles/home.css';
-import Nav from '@components/Nav/Nav.astro';
+
 import NavHome from '@components/home/NavHome.astro';
 import { Icon } from 'astro-icon/components';
 import Hero from '@components/Hero.astro';
@@ -9,19 +8,9 @@ import OurCompromise from '@components/home/sections/OurCompromise.astro';
 import OurWish from '@components/home/sections/OurWish.astro';
 import AmISave from '@components/home/sections/AmISave.astro';
 import ContactUs from '@components/home/sections/ContactUs.astro';
-import Footer from '@components/Footer.astro';
+import PageLayout from 'src/layouts/PageLayout.astro'
 ---
-
-<html lang='en'>
-  <head>
-    <meta charset='utf-8' />
-    <link rel='icon' type='image/svg+xml' href='/favicon.svg' />
-    <meta name='viewport' content='width=device-width' />
-    <meta name='generator' content={Astro.generator} />
-    <title>Astro</title>
-  </head>
-  <body>
-    <Nav fixed classList={['hidden']} currentMenu="Inicio" />
+  <PageLayout title="Inicio" currentMenu="Inicio">
     <Hero backgroundImage='/assets/img/bg-hero1.jpg'>
       <div class='content'>
         <img class='logo' src='/assets/img/logo_iglesia.png' alt='' />
@@ -47,7 +36,7 @@ import Footer from '@components/Footer.astro';
 
     <ContactUs />
 
-    <Footer />
+  </PageLayout>
 
     <script>
       const nav = document.querySelector('.menu');
@@ -78,5 +67,3 @@ import Footer from '@components/Footer.astro';
         processMobileMenu();
       });
     </script>
-  </body>
-</html>
