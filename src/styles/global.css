@@ -8,6 +8,7 @@
   --secondary: #d8bfd8;
   --tertiary: #322f3c;
   --primary-hover: #c178ab;
+  --mobileWidth: 768px;
 }
 
 * {
@@ -73,4 +74,45 @@ h1,h2,h3,h4,h5,h6, p, li, label {
 
 .hidden {
   display: none !important;
+}
+
+.title-page {
+  font-size: 4rem;
+  font-weight: 500;
+  margin-bottom: 2rem;
+  text-align: left;
+}
+
+.subtitle-page {
+  font-size: 2.5rem;
+  font-weight: 500;
+  margin-bottom: 2rem;
+}
+
+p {
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+}
+
+.article-section {
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: justify;
+}
+
+.enfasis {
+  color: var(--primary);
+  font-weight: 600;
+}
+
+.bold {
+  font-weight: 600;
+}
+
+.list {
+  margin: 2rem 0 2rem 3rem;
+  li {
+    list-style: square;
+    margin-bottom: 0.5rem;
+  }
 }

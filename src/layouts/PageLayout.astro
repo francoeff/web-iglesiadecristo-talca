@@ -2,7 +2,8 @@
 import '../styles/global.css';
 import Nav from '@components/Nav/Nav.astro';
 import Footer from '@components/Footer.astro';
-const { title, currentMenu } = Astro.props;
+import { ViewTransitions } from 'astro:transitions';
+const { title, currentMenu, withPadding } = Astro.props;
 ---
 
 <html lang='es'>
@@ -12,6 +13,7 @@ const { title, currentMenu } = Astro.props;
     <meta name='viewport' content='width=device-width' />
     <meta name='generator' content={Astro.generator} />
     <title>{title} - Iglesia de Cristo en Talca</title>
+    <ViewTransitions />
   </head>
   <body>
     <Nav
@@ -19,10 +21,13 @@ const { title, currentMenu } = Astro.props;
       classList={currentMenu === 'Inicio' ? ['hidden'] : []}
       currentMenu={currentMenu}
     />
-    <div class:list={['contentPage', currentMenu !== 'Inicio' && 'space-navbar']}>
+    <slot name='hero' />
+    <div
+      class:list={['contentPage', currentMenu !== 'Inicio' && 'space-navbar', withPadding && 'withPadding']}
+    >
       <slot />
     </div>
-      <Footer />
+    <Footer />
   </body>
 </html>
 
@@ -32,5 +37,12 @@ const { title, currentMenu } = Astro.props;
   }
   .space-navbar {
     margin-top: 65px;
+  }
+  .withPadding {
+    padding: 2rem 4rem;
+
+    @media screen and (max-width: 768px) {
+      padding: 2rem 1rem;
+    }
   }
 </style>

@@ -1,12 +1,18 @@
 ---
-const { backgroundImage } = Astro.props;
+const { backgroundImage, backgroundPosition, height, maxHeight } = Astro.props;
 ---
 
-<style define:vars={{ backgroundImage: `url(${backgroundImage})` }}>
+<style define:vars={{ 
+  backgroundImage: `url(${backgroundImage})`, 
+  height: height || 'auto' ,
+  maxHeight: maxHeight || 'auto',
+  backgroundPosition: backgroundPosition || 'inherit',
+}}>
   .hero {
     position: relative;
     width: 100%;
-    height: 90vh;
+    height: var(--height);
+    max-height: var(--maxHeight);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -21,6 +27,7 @@ const { backgroundImage } = Astro.props;
       ),
       var(--backgroundImage);
     background-size: cover;
+    background-position: var(--backgroundPosition);
   }
 </style>
 <div class='hero'>
