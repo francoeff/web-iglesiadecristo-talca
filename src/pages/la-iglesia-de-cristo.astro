@@ -1,23 +1,130 @@
 ---
-import PageLayout from "src/layouts/PageLayout.astro";
+import Hero from '@components/Hero.astro';
+import PageLayout from 'src/layouts/PageLayout.astro';
 ---
 
-<PageLayout title="La Iglesia" currentMenu="La iglesia">
-    <div class="page">
-        <h1>La Iglesia de Cristo</h1>
-        <p>
-            La iglesia de Cristo es una comunidad de creyentes que se reúnen para adorar a Dios, estudiar la Biblia y
-            compartir el evangelio de Jesucristo. La iglesia es el cuerpo de Cristo en la tierra y está compuesta por
-            personas de todas las edades, razas y trasfondos. La iglesia es un lugar donde los creyentes pueden crecer en
-            su fe, servir a los demás y glorificar a Dios en todo lo que hacen.
-        </p>
-    </div>
+<PageLayout title='La Iglesia' currentMenu='La iglesia' withPadding hero>
+  <Hero
+    backgroundImage='/assets/img/bg-church.jpg'
+    backgroundPosition='center'
+    height='60vh'
+    maxHeight='600px'
+    slot='hero'
+  />
+  <section transition:animate='slide' class='article-section'>
+    <header>
+      <h1 class='title-page'>¿POR QUÉ IGLESIA DE CRISTO?</h1>
+    </header>
+    <article>
+      <p>
+        Cuando Pedro confesó que Jesús era "... el Cristo, el Hijo del Dios
+        viviente", Jesús se alegró y prometió edificar su iglesia sobre esa
+        verdad confesada por Pedro, diciendo: "... sobre esta roca edificaré mi
+        iglesia..." Mateo 16:16-18. Este pasaje responde 5 preguntas
+        fundamentales:
+      </p>
+      <ul class='list'>
+        <li>
+          <p>
+            <span class='enfasis'>¿De Quién es la iglesia?</span>
+            <span class='bold'>De Jesús</span>, porque dijo: "MI iglesia".
+          </p>
+        </li>
+        <li>
+          <p>
+            <span class='enfasis'>¿Cuántas iglesias tiene Cristo?</span>
+            <span class='bold'>Una</span>, porque dijo: "mi iglesia", hablando
+            en singular.
+          </p>
+        </li>
+        <li>
+          <p>
+            <span class='enfasis'>¿Sobre qué está edificada la iglesia?</span>
+            <span class='bold'
+              >Sobre la verdad que dijo Pedro: que Jesús es el Cristo, el Hijo
+              del Dios viviente</span
+            >, ya que la pregunta en cuestión era: "¿Quién dicen los hombres que
+            es el Hijo del Hombre?" (v. 13)
+          </p>
+        </li>
+        <li>
+          <p>
+            <span class='enfasis'>¿Estaba establecida o sería a futuro?</span>
+            <span class='bold'>No estaba establecida</span>, porque dijo:
+            "edificaré" hablando del futuro.
+          </p>
+        </li>
+        <li>
+          <p>
+            <span class='enfasis'>¿Sería destruida alguna vez?</span>
+            <span class='bold'>No</span>, porque el versículo 19 dice que las
+            puertas del Hades no prevalecerían contra ella
+          </p>
+        </li>
+      </ul>
+
+      <p>
+        Por lo tanto, Jesús solo tiene una iglesia, es decir, un grupo de
+        personas apartadas del pecado para un propósito especial: adorarle en
+        espíritu y verdad. Además, habló de su iglesia, le pertenece. Es por
+        ello que en el Nuevo Testamento vemos que este grupo de cristianos se
+        referían así mismo como IGLESIA DE CRISTO (Romanos 16:16), para profesar
+        públicamente a Quién servían.
+      </p>
+
+      <p>
+        Sin embargo, no es un nombre denominacional, ya que también se les
+        llamaba Iglesia de Dios (1 Corintios 1:2), iglesia de los laodicenses
+        (Colosenses 4:16, indicando el lugar geográfrico en el que estaba
+        situada), por lo que no tiene un nombre en específico.
+      </p>
+
+      <p>
+        Considerando estos antecedentes, nos apegamos a los conceptos bíblicos,
+        y usamos el término "Iglesia de Cristo" no como un nombre propio, sino
+        más bien indicando a Quién pertenemos y damos gloria. <span class='enfasis'>Somos la iglesia de Cristo en Talca</span>.
+      </p>
+    </article>
+
+    <article>
+      <h2 class="subtitle-page">NUESTRA CONGREGACIÓN</h2>
+      <p>
+        Somos una congregación de 40 miembros, nos reunimos en nuestro templo
+        ubicado en Villa Francia 25 1/2 sur 10 oriente #1045, Maule. Tenemos cinco predicadores que nos traen el mensaje bíblico cada jueves
+        y domingo:
+      </p>
+      <ul class="list">
+        <li><p>Esteban Figueroa</p></li>
+        <li><p>Felipe Figueroa</p></li>
+        <li><p>Miguel Sepúlveda</p></li>
+        <li><p>Patricio Quiróz</p></li>
+        <li><p>Franco Figueroa</p></li>
+      </ul>
+
+      <p>
+        Hay un grupo de damas que se reunen mensualmente para estudiar la Biblia, y estimularse al amor y buenas obras, mediante conversaciones y actividades que fomentan la comunión y el crecimiento espiritual.
+      </p>
+
+      <p>
+        También contamos con clases bíblicas para los niños, donde se les enseña la palabra de Dios de una manera didáctica y entretenida.
+      </p>
+
+      <p>
+        La iglesia de Cristo en Talca se caracteriza por el amor y buen
+        recibimiento que se les da a sus miembros y visitantes. Es por ello que
+        le invitamos cordialmente a participar de nuestras reuniones de
+        adoración y tener comunión en el amor del Señor.
+      </p>
+    </article>
+  </section>
 </PageLayout>
 
 <style>
-    .page {
-        max-width: 800px;
-        margin: 2rem auto;
-        padding: 2rem;
-    }
+  p {
+    line-height: 2rem;
+  }
+
+  .subtitle-page {
+    margin-top: 2rem;
+  }
 </style>
