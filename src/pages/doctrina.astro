@@ -1,0 +1,39 @@
+---
+import PageLayout from 'src/layouts/PageLayout.astro';
+import { Content as DoctrinaContent } from '/src/data/doctrine.mdx';
+import '@styles/mdx.css';
+import Hero from '@components/Hero.astro';
+---
+
+<PageLayout title='Doctrina' currentMenu='Doctrina' withPadding>
+  <Hero
+    backgroundImage='/assets/img/estudiar-la-biblia.jpg'
+    maxHeight='60vh'
+    height='60vh'
+    maxHeight='600px'
+    slot='hero'
+  />
+  <section transition:animate='slide' class='article-section'>
+    <article>
+      <DoctrinaContent />
+    </article>
+  </section>
+</PageLayout>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const paragraphs = document.querySelectorAll('p');
+    let imageParagraphCount = 0;
+
+    paragraphs.forEach((p) => {
+      if (p.querySelector('img')) {
+        imageParagraphCount++;
+        if (imageParagraphCount % 2 === 0) {
+          p.classList.add('image-even');
+        } else {
+          p.classList.add('image-odd');
+        }
+      }
+    });
+  });
+</script>

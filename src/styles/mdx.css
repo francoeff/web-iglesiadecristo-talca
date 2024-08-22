@@ -1,0 +1,38 @@
+h1 {
+  font-size: 3rem;
+  margin-bottom: 2rem;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 2.5rem;
+  margin: 4rem 0 2rem 0;
+  font-weight: 600;
+}
+
+ul {
+  margin-left: 2rem;
+}
+li {
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+  margin-bottom: 1rem;
+  list-style: square;
+}
+
+img {
+  width: 100%;
+  max-width: 400px;
+}
+
+/* Selecciona todas las imágenes dentro del contenedor y las alinea a la izquierda */
+.image-odd img {
+  float: left;
+  margin-right: 2rem;
+}
+
+/* Selecciona todas las imágenes pares dentro del contenedor y las alinea a la derecha */
+.image-even img {
+  float: right;
+  margin-left: 2rem;
+}
