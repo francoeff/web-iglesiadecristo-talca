@@ -1,44 +1,57 @@
+import {Image} from 'astro:assets';
+import {BibleVerse} from '@components/react/BibleVerse';
+import bibleImg from 'src/img/biblia.png'
+import creadorImg from 'src/img/creador.jpg'
+import pecadoImg from 'src/img/pecado-nos-aleja-de-Dios.jpg'
+import salvacionImg from 'src/img/salvacion.jpg'
+import adoraciónImg from 'src/img/orar_2.jpg'
+import vidaEternaImg from 'src/img/vida_eterna.jpg'
+
 # Doctrina
 
-En esta sección presentamos resumidamente las enseñanzas básicas de la doctrina de nuestra fe. Sin embargo, iremos profundizando en cada una de ellas a medida que subamos material bíblico para que puedas ahondar más y verificar todas estas enseñanzas, tal como lo hacían los hermanos de Berea con Pablo, corroborando que todo lo que enseñaba era de acuerdo a las Escrituras (Hechos 17:10-11)
+En esta sección presentamos resumidamente las enseñanzas básicas de la doctrina de nuestra fe. Sin embargo, iremos profundizando en cada una de ellas a medida que subamos material bíblico para que puedas ahondar más y verificar todas estas enseñanzas, tal como lo hacían los hermanos de Berea con Pablo, corroborando que todo lo que enseñaba era de acuerdo a las Escrituras <BibleVerse client:load verse="(Hechos 17:10-11)" />
 
 ## BIBLIA
-![biblia-imagen](/assets/img/biblia.png) Creemos que la Biblia es una compilación de 66 libros inspirados por Dios (2 Pedro 1:19-21), escrita por más de 40 hombres de diferentes tiempos y culturas, por un periodo de 1500 años aprox., y pese a todas las diferencias socioculturales que tuvieron los autores, contiene un solo mensaje libre de contradicciones, confirmando la inspiración proveniente de una mente.
+<Image src={bibleImg} alt='biblia' class="image-odd" />
+Creemos que la Biblia es una compilación de 66 libros inspirados por Dios (<BibleVerse client:load verse="2 Pedro 1:19-21" />), escrita por más de 40 hombres de diferentes tiempos y culturas, por un periodo de 1500 años aprox., y pese a todas las diferencias socioculturales que tuvieron los autores, contiene un solo mensaje libre de contradicciones, confirmando la inspiración proveniente de una mente.
 
 Considerando esto, la Biblia es nuestra única fuente de autoridad para saber cuál es la voluntad de Dios, por lo que toda nuestra creencia doctrinal está basada en ella. Es por eso que rechazamos todo tipo de enseñanza proveniente de la opinión humana. Cada creencia debe ser respaldada con textos bíblicos usados correctamente en su contexto.
 
-No se necesita ningún otro libro, la Biblia es suficiente para presentarnos aprobados ante Dios (2 Tim. 3:16-17).
+No se necesita ningún otro libro, la Biblia es suficiente para presentarnos aprobados ante Dios (<BibleVerse client:load verse="2 Tim. 3:16-17" />).
 
 ## DIOS
-![creador-imagen](/assets/img/creador.jpg) Creemos que Dios es UNO (Mar. 12:29), no tiene principio ni fin, es Eterno (Salm. 90:2); Creador de todas las cosas (Gen. 1:1), llena todo el universo con su santísima presencia. Él es la expresión más sublime de majestad, poder, justicia, amor y misericordia, donde los conceptos más altos de moralidad adquieren significado en su Persona. Solo a Él se le debe toda adoración, loor y alabanzas, por siempre.
+<Image src={creadorImg} alt='Creador' class="image-even" />
+Creemos que Dios es UNO (<BibleVerse client:load verse="Mar. 12:29" />), no tiene principio ni fin, es Eterno (Salm. 90:2); Creador de todas las cosas (<BibleVerse client:load verse="Gen. 1:1" />), llena todo el universo con su santísima presencia. Él es la expresión más sublime de majestad, poder, justicia, amor y misericordia, donde los conceptos más altos de moralidad adquieren significado en su Persona. Solo a Él se le debe toda adoración, loor y alabanzas, por siempre.
 
-Así como las Escrituras hablan que Dios es UNO, también dicen que el Padre es Dios (Juan 17:3), Jesús es Dios (Juan 1:1), y el Espíritu Santo es Dios (Hechos 5:4). Estas tres Personas de la Deidad obran en perfecta UNIDAD, lo cual es evidente en la creación del universo, el bautismo de Jesús, la salvación de las personas, la santificación del cristiano, entre otros.
+Así como las Escrituras hablan que Dios es UNO, también dicen que el Padre es Dios (<BibleVerse client:load verse="Juan 17:3" />), Jesús es Dios (<BibleVerse client:load verse="Juan 1:1" />), y el Espíritu Santo es Dios (<BibleVerse client:load verse="Hechos 5:4" />). Estas tres Personas de la Deidad obran en perfecta UNIDAD, lo cual es evidente en la creación del universo, el bautismo de Jesús, la salvación de las personas, la santificación del cristiano, entre otros.
 
 ## PECADO
-![pecado nos aleja de Dios - imagen](/assets/img/pecado-nos-aleja-de-Dios.jpg) Creemos que el pecado es la peor desgracia de la humanidad. Entró a este mundo con la desobediencia de Adán y Eva (Génesis 3), provocando un quiebre en la relación entre Dios y el hombre, para siempre, porque Dios es Santo, y no tiene comunión con el pecado.
+<Image src={pecadoImg} alt='El pecado nos aleja de Dios' class="image-odd" />
+Creemos que el pecado es la peor desgracia de la humanidad. Entró a este mundo con la desobediencia de Adán y Eva (Génesis 3), provocando un quiebre en la relación entre Dios y el hombre, para siempre, porque Dios es Santo, y no tiene comunión con el pecado.
 
 Es el causante de todo el sufrimiento que hay en el mundo, tales como guerras, divorcios, maltratos, engaños, abusos, suicidios, depresión, entre otros.
 
-- El pecado Mata (Romanos 6:23). La muerte implica una separación, en un sentido físico separa el cuerpo del alma, y en un sentido espiritual separa nuestras almas de Dios.
-- El pecado No es heredable (Ezequiel 18:20). Por lo tanto, el pecado de Adán no nos hace nacer pecadores.
-- Todos hemos pecado (Romanos 3:23). Todos merecemos castigo eterno, pero no por el pecado de Adán, sino porque cada persona ha pecado contra Dios.
+- **El pecado Mata** (<BibleVerse client:load verse="Romanos 6:23" />). La muerte implica una separación, en un sentido físico separa el cuerpo del alma, y en un sentido espiritual separa nuestras almas de Dios.
+- **El pecado No es heredable** (<BibleVerse client:load verse="Ezequiel 18:20" />). Por lo tanto, el pecado de Adán no nos hace nacer pecadores.
+- **Todos hemos pecado** (<BibleVerse client:load verse="Romanos 3:23" />). Todos merecemos castigo eterno, pero no por el pecado de Adán, sino porque cada persona ha pecado contra Dios.
 
 ## SALVACIÓN
-![salvacion-imagen](/assets/img/salvacion.jpg) Creemos que el Padre envió a Jesús al mundo para salvarlo, ya que estábamos muertos en nuestros delitos y pecados (Efesios 2:4-5), destinados a la perdición eterna. No merecíamos su misericordia, pues éramos sus enemigos, injustos, pecadores y por ende, ofendíamos constantemente su santidad. Merecíamos el castigo, pero su justicia actuó juntamente con su amor, cargando su ira en Cristo Jesús en lugar nuestro.
+<Image src={salvacionImg} alt='Salvación' class="image-even" />
+Creemos que el Padre envió a Jesús al mundo para salvarlo, ya que estábamos muertos en nuestros delitos y pecados (<BibleVerse client:load verse="Efesios 2:4-5" />), destinados a la perdición eterna. No merecíamos su misericordia, pues éramos sus enemigos, injustos, pecadores y por ende, ofendíamos constantemente su santidad. Merecíamos el castigo, pero su justicia actuó juntamente con su amor, cargando su ira en Cristo Jesús en lugar nuestro.
 
 Creemos que la salvación es posible solo por la fe en Jesucristo, y no por las obras; es un regalo, no un pago… Por gracia somos salvos. Pero entendemos que la fe es más que decir “creo que Jesús es el Señor”, porque aun lo demonios creen y tiemblan, pero eso no les salva; la fe consiste en actuar de acuerdo a lo que se cree.
 
 Por lo tanto, la salvación viene por la fe en lo que Jesús quiere que escuchemos y hagamos: obedecer el evangelio. Por tanto, lo primero es saber qué es el evangelio, y luego, obedecerlo. De esa manera mostramos nuestra fe en Cristo, porque actuamos de acuerdo a lo que creemos del mensaje de Jesús.
 
-El evangelio son las buenas nuevas de salvación, cuyo mensaje en resumidas cuentas es: “Que Cristo murió por nuestros pecados, conforme a las Escrituras; y que fue sepultado, y que resucitó al tercer día, conforme a las Escrituras” (1 Cor. 15:3-4).
+El evangelio son las buenas nuevas de salvación, cuyo mensaje en resumidas cuentas es: “Que Cristo murió por nuestros pecados, conforme a las Escrituras; y que fue sepultado, y que resucitó al tercer día, conforme a las Escrituras” (<BibleVerse client:load verse="1 Cor. 15:3-4" />).
 
-Pablo explica que obedecemos el evangelio mediante el bautismo en (Romanos 6:3-4): “¿O no sabéis que todos los que hemos sido bautizados en Cristo Jesús, hemos sido bautizados en su muerte? Porque somos sepultados juntamente con él para muerte por el bautismo, a fin de que como Cristo resucitó de los muertos por la gloria del Padre, así también nosotros andemos en vida nueva.”.
+Pablo explica que obedecemos el evangelio mediante el bautismo en (<BibleVerse client:load verse="Romanos 6:3-4" />): “¿O no sabéis que todos los que hemos sido bautizados en Cristo Jesús, hemos sido bautizados en su muerte? Porque somos sepultados juntamente con él para muerte por el bautismo, a fin de que como Cristo resucitó de los muertos por la gloria del Padre, así también nosotros andemos en vida nueva.”.
 
-Además, es importante señalar que el arrepentimiento es un paso importante en la salvación, es lo que Pedro mencionó en su sermón diciendo "Arrepentíos, y bautícese cada uno de vosotros en el nombre de Jesucristo para perdón de los pecados" (Hechos 2:38). El arrepentimiento implica un cambio de mente producido por la tristeza de haber pecado contra Dios.
+Además, es importante señalar que el arrepentimiento es un paso importante en la salvación, es lo que Pedro mencionó en su sermón diciendo "Arrepentíos, y bautícese cada uno de vosotros en el nombre de Jesucristo para perdón de los pecados" (<BibleVerse client:load verse="Hechos 2:38" />). El arrepentimiento implica un cambio de mente producido por la tristeza de haber pecado contra Dios.
 
-También debemos confesar públicamente que Jesús es el Señor, el Cristo, el Hijo de Dios, tal como lo hizo el eunuco después de conversar con Felipe (Hechos 8:37; Romanos 10:9). Es el fundamento de nuestra fe (Mateo 16:18).
+También debemos confesar públicamente que Jesús es el Señor, el Cristo, el Hijo de Dios, tal como lo hizo el eunuco después de conversar con Felipe (<BibleVerse client:load verse="Hechos 8:37; Romanos 10:9" />). Es el fundamento de nuestra fe (<BibleVerse client:load verse="Mateo 16:18" />).
 
-Finalmente, es importante que seamos fieles hasta el último día de nuestras vidas, ya que haber obedecido el evangelio no significa que podemos olvidarnos de Dios, es necesario mantener una vida de adoración hasta al el final (Filipenses 2:12; Apocalipsis 2:10).
+Finalmente, es importante que seamos fieles hasta el último día de nuestras vidas, ya que haber obedecido el evangelio no significa que podemos olvidarnos de Dios, es necesario mantener una vida de adoración hasta al el final (<BibleVerse client:load verse="Filipenses 2:12; Apocalipsis 2:10" />).
 
 
 En conclusión, la salvación es un regalo ofrecido por Dios para todo aquel que cree a este mensaje y demuestra su fe mediante la obediencia al evangelio. Se podría resumir en 6 pasos:
@@ -46,17 +59,19 @@ En conclusión, la salvación es un regalo ofrecido por Dios para todo aquel que
 OÍR -> CREER ->  ARREPENTIRSE -> CONFESAR -> BAUTIZARSE -> SER FIEL.
 
 ## ADORACIÓN
-![adoracion-imagen](/assets/img/orar_2.jpg) Creemos que Dios merece toda adoración, honra y alabanza, solo Él es Digno. Fuimos creados con este propósito, por lo que, solo adorando el santo Nombre de Dios, nuestra existencia tiene sentido y valor.
+<Image src={adoraciónImg} alt='Orar' class="image-odd" />
+Creemos que Dios merece toda adoración, honra y alabanza, solo Él es Digno. Fuimos creados con este propósito, por lo que, solo adorando el santo Nombre de Dios, nuestra existencia tiene sentido y valor.
 
 Entendemos la adoración como una expresión emanada de un corazón que se derrama en admiración, gratitud, amor y devoción hacia Dios, entregada mediante actos que Él permite ofrecerle, tales como:
 
-- Cantar. Cantamos himnos con nuestras voces, tal como lo expresa en su palabra en el Nuevo Testamento (Hechos 16:25; Efesios. 5:19; Col.3:16; Heb. 13:15), sin el uso de instrumentos mecánicos como guitarras, mandolinas, panderos, etc. Solo es nuestro corazón y voz alabando a Dios.
-- Orar. Oramos al Padre por medio de Jesucristo con rogativas, peticiones y acciones de gracias. Es nuestro canal de comunicación directo con Él.
-- Estudiar su palabra. Escuchamos enseñanzas bíblicas preparadas por algún hermano designado para determinado día, donde aprendemos y nos estimulamos a tener vidas que le glorifiquen.
-- Participar de la Cena del Señor. Cada primer día de la semana recordamos la muerte, sepultura y resurrección de Jesucristo, tal como lo hacían los primeros cristianos, conmemorando solemnemente su sacrificio expiatorio por la humanidad.
-- Recolectar las ofrendas. Cada primer día de la semana recolectamos una ofrenda voluntaria, las cuales son usadas para la ayuda de miembros en necesidad, la edificación de la iglesia, y la propagación del evangelio.
+- **Cantar**. Cantamos himnos con nuestras voces, tal como lo expresa en su palabra en el Nuevo Testamento (<BibleVerse client:load verse="Hechos 16:25; Efesios. 5:19; Col.3:16; Heb. 13:15" />), sin el uso de instrumentos mecánicos como guitarras, mandolinas, panderos, etc. Solo es nuestro corazón y voz alabando a Dios.
+- **Orar**. Oramos al Padre por medio de Jesucristo con rogativas, peticiones y acciones de gracias. Es nuestro canal de comunicación directo con Él.
+- **Estudiar su palabra**. Escuchamos enseñanzas bíblicas preparadas por algún hermano designado para determinado día, donde aprendemos y nos estimulamos a tener vidas que le glorifiquen.
+- **Participar de la Cena del Señor**. Cada primer día de la semana recordamos la muerte, sepultura y resurrección de Jesucristo, tal como lo hacían los primeros cristianos, conmemorando solemnemente su sacrificio expiatorio por la humanidad.
+- **Recolectar las ofrendas**. Cada primer día de la semana recolectamos una ofrenda voluntaria, las cuales son usadas para la ayuda de miembros en necesidad, la edificación de la iglesia, y la propagación del evangelio.
 
 Todo esto lo hacemos como congregación cada primer día de la semana. Pero entendemos que la adoración no se restringe solo al día domingo, excepto por la Cena del Señor. La adoración que Dios merece no es solo el domingo en la mañana, sino que de cada segundo de nuestras vidas, que le glorifiquemos donde sea que estemos, tanto con nuestro actuar cotidiano, como con momentos exclusivos de alabanzas.
 
 ## VIDA ETERNA
-![vida eterna -imagen](/assets/img/vida_eterna.jpg) Creemos que la vida en este mundo es temporal, siendo una antesala a la venidera, la cual es eterna. Esta vida eterna se vivirá después de la segunda venida de Cristo y el día del Juicio Final, donde cada uno será juzgado por sus obras en esta vida; vida eterna en el cielo junto a Dios para quienes hicieron lo bueno, y castigo eterno para quienes hicieron lo malo. Los que hicieron lo bueno no se refiere a quienes hicieron limosnas y ayudaban al prójimo, sino a quienes limpiaron sus almas con la sangre de Cristo Jesús mediante la fe en Él y una vida de fidelidad.
+<Image src={vidaEternaImg} alt='Vida eterna' class="image-odd" />
+Creemos que la vida en este mundo es temporal, siendo una antesala a la venidera, la cual es eterna. Esta vida eterna se vivirá después de la segunda venida de Cristo y el día del Juicio Final, donde cada uno será juzgado por sus obras en esta vida; vida eterna en el cielo junto a Dios para quienes hicieron lo bueno, y castigo eterno para quienes hicieron lo malo. Los que hicieron lo bueno no se refiere a quienes hicieron limosnas y ayudaban al prójimo, sino a quienes limpiaron sus almas con la sangre de Cristo Jesús mediante la fe en Él y una vida de fidelidad.

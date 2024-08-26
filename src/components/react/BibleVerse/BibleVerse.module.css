@@ -1,0 +1,10 @@
+.bibleVerse {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--primary);
+    cursor: pointer;
+
+    &:hover {
+        color: var(--primary-hover);
+    }
+}

@@ -117,3 +117,13 @@ p, .paragraph {
     margin-bottom: 0.5rem;
   }
 }
+
+.pasaje {
+  .libro {
+    font-weight: 700;
+  }
+  .versiculo {
+    font-size: .7rem;
+    vertical-align: super;
+  }
+}
