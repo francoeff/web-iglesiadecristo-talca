@@ -23,16 +23,21 @@ li {
 img {
   width: 100%;
   max-width: 400px;
+  height: auto;
 }
 
 /* Selecciona todas las imágenes dentro del contenedor y las alinea a la izquierda */
-.image-odd img {
+.image-odd {
   float: left;
   margin-right: 2rem;
 }
 
 /* Selecciona todas las imágenes pares dentro del contenedor y las alinea a la derecha */
-.image-even img {
+.image-even {
   float: right;
   margin-left: 2rem;
+}
+
+strong {
+  font-weight: 600;
 }

@@ -1,5 +1,6 @@
 ---
 const { classes } = Astro.props;
+import jesusAbrazando from 'src/img/jesus-abrazando.png';
 ---
 
 <section class=`section-our-wish ${classes}`>
@@ -29,7 +30,7 @@ const { classes } = Astro.props;
       </p>
     </div>
     <div class='image'>
-      <img src='/assets/img/jesus-abrazando.png' alt='Nuestro deseo' />
+      <img src={jesusAbrazando.src} alt='Nuestro deseo' />
     </div>
   </div>
 </section>

@@ -1,13 +1,14 @@
 ---
 import { Icon } from 'astro-icon/components';
 import { menus } from '@data/menus';
+import logoImg from 'src/img/logo_iglesia.png'
 const { fixed = '', classList = [], currentMenu } = Astro.props;
 ---
 
 <nav class:list={['menu', fixed && 'fixed', ...classList]}>
   <div class='logo'>
     <a href='/'>
-      <img src='/assets/img/logo_iglesia.png' />
+      <img src={logoImg.src} />
     </a>
   </div>
   {
