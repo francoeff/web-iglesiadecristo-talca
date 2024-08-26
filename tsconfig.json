@@ -12,6 +12,9 @@
       "@data/*": [
         "src/data/*"
       ],
+      "@stores/*": [
+        "src/stores/*"
+      ],
     },
     "jsx": "react-jsx",
     "jsxImportSource": "react"
