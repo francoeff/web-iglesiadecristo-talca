@@ -1,0 +1,46 @@
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.4);
+
+    &.show {
+        display: block;
+    }
+
+    .dialog {
+        background-color: #fefefe;
+        margin: 15% auto;
+        padding: 1.5rem;
+        border-radius: .5rem;
+        width: 80%;
+        max-width: 30rem;
+        display: flex;
+        flex-direction: column;
+        
+        .closeButton {
+            text-align: right;
+            color: #aaa;
+            font-size: 1rem;
+            font-weight: bold;
+            background-color: transparent;
+            border: none;
+            
+            &:hover,
+            &:focus {
+                color: black;
+                text-decoration: none;
+                cursor: pointer;
+            }
+        }
+        
+        .content {
+            height: 50vh;
+            overflow-y: auto;
+        }
+    }
+}
