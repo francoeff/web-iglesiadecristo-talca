@@ -4,12 +4,13 @@ import { isModalOpen, modalChildren } from '@stores/ModalStore';
 export const Modal = () => {
   const $modalChildren = useStore(modalChildren);
   const $isModalOpen = useStore(isModalOpen);
+  const closeModal = () => isModalOpen.set(false);
   return (
-    <div className={`${styles.modal} ${$isModalOpen ? styles.show : ''}`}>
+    <div className={`${styles.modal} ${$isModalOpen ? styles.show : ''}`} onClick={closeModal}>
       <div className={styles.dialog} onClick={(e) => e.stopPropagation()}>
         <button
           className={styles.closeButton}
-          onClick={() => isModalOpen.set(false)}
+          onClick={closeModal}
         >
           X
         </button>
