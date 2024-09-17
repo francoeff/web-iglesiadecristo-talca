@@ -1,0 +1,35 @@
+---
+import PageLayout from './PageLayout.astro';
+import '@styles/mdx.css';
+import { Modal } from '@components/react/Modal';
+import Hero from '@components/Hero.astro';
+import { Icon } from 'astro-icon/components';
+const { frontmatter } = Astro.props;
+const image = frontmatter.image?.src || '/src/img/bg-sermones.webp';
+const styleProperties = {
+  marginBottom: '0',
+  fontSize: '1rem',
+  textTransform: 'uppercase',
+  fontWeight: 600,
+};
+---
+
+<PageLayout withPadding title={frontmatter.title} currentMenu='Sermones'>
+  <Hero
+    backgroundImage={image}
+    maxHeight='60vh'
+    height='60vh'
+    maxHeight='600px'
+    slot='hero'
+    backgroundPosition='center'
+  />
+  <Modal client:load />
+  <div class='article-section'>
+    <a class='btn-back' href='/sermones'><Icon name='left-arrow' /> Volver</a>
+    <h1 class='title-page'>{frontmatter.title}</h1>
+    <p style={styleProperties}>Predicador: {frontmatter.author}</p>
+    <p style={{...styleProperties, marginBottom: '2rem' }}>Tags: {frontmatter.tags.join(', ')}</p>
+    <slot />
+  </div>
+</PageLayout>
+

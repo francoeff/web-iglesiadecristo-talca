@@ -1,0 +1,41 @@
+---
+import Hero from '@components/Hero.astro';
+// import ItemList from '@components/sermons/ItemList.astro';
+import { List } from '@components/react/Sermon/List/List';
+import PageLayout from 'src/layouts/PageLayout.astro';
+const sermons = await Astro.glob('./*.mdx');
+---
+
+<PageLayout title='Sermones' currentMenu='Sermones' withPadding>
+  <Hero
+    backgroundImage='/src/img/bg-sermones.webp'
+    height='60vh'
+    maxHeight='600px'
+    slot='hero'
+    backgroundPosition='top'
+  />
+  <div class='article-section'>
+    <h1 class='title-page'>Sermones</h1>
+    <List sermons={sermons} client:load />
+  </div>
+</PageLayout>
+
+<style>
+  .sermonFilter {
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 1rem;
+  }
+  .inputText {
+    padding: 0.5rem;
+    border: 1px solid #eaeaea;
+    border-radius: 5px;
+    font-size: 1rem;
+    width: 100%;
+    max-width: 500px;
+  }
+  .sermonList {
+    display: flex;
+    flex-direction: column;
+  }
+</style>

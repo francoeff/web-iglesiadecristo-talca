@@ -50,6 +50,27 @@ h1,h2,h3,h4,h5,h6, p, li, label {
   }
 }
 
+.btn-back {
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  gap: .5rem;
+  padding: .5rem 1rem;
+  color: var(--primary);
+  border: solid 1px var(--primary);
+  margin-bottom: 2rem;
+  border-radius: .3rem;
+  transition: all ease-in-out .3s;
+  
+  svg {
+    font-size: 1.5rem;
+  }
+  
+  &:hover {
+    background-color: #fff2fb;
+  }
+}
+
 .divider-bottom {
   clip-path: polygon(
     0 0,
