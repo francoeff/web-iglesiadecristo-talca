@@ -4,7 +4,8 @@ import styles from './List.module.css';
 import type { MDXInstance } from 'astro';
 import { sermonsFiltered } from '@stores/SermonStore.ts';
 import { Pagination } from '@components/react/Pagination';
-import { SermonsFilter } from 'src/models/sermons';
+import { PublicationsFilter } from 'src/models/publications';
+import { useState } from 'react';
 
 export const List = ({
   sermons,
@@ -12,9 +13,10 @@ export const List = ({
   sermons: MDXInstance<Record<string, any>>[];
 }) => {
   const $sermonsFiltered = useStore(sermonsFiltered);
+  const [itemsPerPage, setItemsPerPage] = useState(5);
   const handleChange = (e: any) => {
-    const {value} = e.target;
-    const filtered = SermonsFilter.filterFromAstro(sermons, value);
+    const { value } = e.target;
+    const filtered = PublicationsFilter.filterFromAstro(sermons, value);
     sermonsFiltered.set(filtered);
   };
 
@@ -30,9 +32,21 @@ export const List = ({
           placeholder='Buscar sermones'
           onChange={handleChange}
         />
+
+        <select
+          className={styles.selectItems}
+          onChange={(e) => setItemsPerPage(parseInt(e.target.value))}
+          value={itemsPerPage}
+        >
+          <option value=''>Items por página</option>
+          <option value='3'>3</option>
+          <option value='5'>5</option>
+          <option value='10'>10</option>
+          <option value='15'>15</option>
+        </select>
       </div>
       <div className='sermonList'>
-        <Pagination itemsPerPage={3}>
+        <Pagination itemsPerPage={itemsPerPage}>
           {sermonsToShow.map(
             ({
               url,

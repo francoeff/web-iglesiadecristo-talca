@@ -1,4 +1,4 @@
-export class SermonsFilter {
+export class PublicationsFilter {
   static filterByTitle(title: string, value: string) {
     return title.toLowerCase().includes(value.toLowerCase());
   }
@@ -11,12 +11,12 @@ export class SermonsFilter {
     return tags.join('-').toLowerCase().includes(value.toLowerCase());
   }
 
-  static filterFromAstro(sermons: any[], value: string) {
-    return sermons.filter(
-      (sermon) =>
-        this.filterByTitle(sermon.frontmatter.title, value) ||
-        this.filterByDescription(sermon.frontmatter.description, value) ||
-        this.filterByTags(sermon.frontmatter.tags, value)
+  static filterFromAstro(publications: any[], value: string) {
+    return publications.filter(
+      (publication) =>
+        this.filterByTitle(publication.frontmatter.title, value) ||
+        this.filterByDescription(publication.frontmatter.description, value) ||
+        this.filterByTags(publication.frontmatter.tags, value)
     );
   }
 }
