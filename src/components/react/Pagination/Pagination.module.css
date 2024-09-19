@@ -1,0 +1,26 @@
+.buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    gap: .5rem;
+
+    button {
+        border: solid 1px var(--primary);
+        padding: .5rem 1rem;
+        border-radius: .2rem;
+        color: var(--primary);
+        background-color: #fff;
+        cursor: pointer;
+
+        &:disabled:not(.active) {
+            background-color: #eaeaea;
+            border-color: #d1d1d1;
+            color: #655b5b;
+            cursor: not-allowed;
+        }
+        &.active {
+            background-color: var(--primary);
+            color: #fff;
+        }
+    }
+}

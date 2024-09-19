@@ -3,6 +3,8 @@ import { ItemList } from './ItemList';
 import styles from './List.module.css';
 import type { MDXInstance } from 'astro';
 import { sermonsFiltered } from '@stores/SermonStore.ts';
+import { Pagination } from '@components/react/Pagination';
+import { SermonsFilter } from 'src/models/sermons';
 
 export const List = ({
   sermons,
@@ -11,15 +13,13 @@ export const List = ({
 }) => {
   const $sermonsFiltered = useStore(sermonsFiltered);
   const handleChange = (e: any) => {
-    const value = e.target.value;
-    const filtered = sermons.filter((sermon) =>
-      sermon.frontmatter.title.toLowerCase().includes(value.toLowerCase()) ||
-      sermon.frontmatter.description.toLowerCase().includes(value.toLowerCase())
-    );
+    const {value} = e.target;
+    const filtered = SermonsFilter.filterFromAstro(sermons, value);
     sermonsFiltered.set(filtered);
   };
 
-  const sermonsToShow = $sermonsFiltered.length > 0 ? $sermonsFiltered : sermons;
+  const sermonsToShow =
+    $sermonsFiltered.length > 0 ? $sermonsFiltered : sermons;
 
   return (
     <>
@@ -32,22 +32,24 @@ export const List = ({
         />
       </div>
       <div className='sermonList'>
-        {sermonsToShow.map(
-          ({
-            url,
-            frontmatter: { title, description, image, pubDate, tags },
-          }) => (
-            <ItemList
-              key={url}
-              title={title}
-              description={description}
-              image={image}
-              pubDate={pubDate}
-              url={url as string}
-              tags={tags}
-            />
-          )
-        )}
+        <Pagination itemsPerPage={3}>
+          {sermonsToShow.map(
+            ({
+              url,
+              frontmatter: { title, description, image, pubDate, tags },
+            }) => (
+              <ItemList
+                key={url}
+                title={title}
+                description={description}
+                image={image}
+                pubDate={pubDate}
+                url={url as string}
+                tags={tags}
+              />
+            )
+          )}
+        </Pagination>
       </div>
     </>
   );
