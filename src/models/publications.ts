@@ -20,3 +20,38 @@ export class PublicationsFilter {
     );
   }
 }
+
+export class PublicationsOrderBy {
+  static dateDesc(a: any, b: any) {
+    return new Date(b.frontmatter.pubDate).getTime() - new Date(a.frontmatter.pubDate).getTime();
+  }
+
+  static dateAsc(a: any, b: any) {
+    return new Date(a.frontmatter.pubDate).getTime() - new Date(b.frontmatter.pubDate).getTime();
+  }
+
+  static titleDesc(a: any, b: any) {
+    return b.frontmatter.title.localeCompare(a.frontmatter.title);
+  }
+
+  static titleAsc(a: any, b: any) {
+    return a.frontmatter.title.localeCompare(b.frontmatter.title);
+  }
+
+  static sort(publications: any[], orderBy: OrderBy) {
+    switch (orderBy) {
+      case 'date-desc':
+        return publications.sort(this.dateDesc);
+      case 'date-asc':
+        return publications.sort(this.dateAsc);
+      case 'title-desc':
+        return publications.sort(this.titleDesc);
+      case 'title-asc':
+        return publications.sort(this.titleAsc);
+      default:
+        return publications;
+    }
+  }
+}
+
+export type OrderBy = 'date-desc' | 'date-asc' | 'title-desc' | 'title-asc';
